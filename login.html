@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+  a{
+      
+        text-decoration: none;
+        padding: 3px;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 3px;
+        background-color: lightgrey;
+        float:right;
+        
+    }
+    
+    .s{
+            color:red;
+    }
+</style>
+</head>
+<body>
+<script type="text/javascript">
+  function validation(){
+    var user1 = document.getElementById('user').value;
+    var password1  = document.getElementById('password').value;
+    if(user1 == "" || ( password1.length<6 || password1 == "") ){
+      document.getElementById('message').innerHTML="**Please enter the atleast 6 digit password**";
+      return false;
+    }
+    
+    else{
+      true;
+    }
+  }
+
+</script>
+  <div class="container">
+	<div class="row">
+        <div class="col-sm-2"></div>
+     <div class="col-sm-4" id="log1">
+      <div align="center"; class="login"><strong><h3>Login</h3></strong>
+        </div>
+      <form  action="#"  onsubmit="return validation()" class="form-horizontal">
+
+        <div class="form-group">
+        <label>User ID</label>
+            <input type="text" class="form-control" placeholder="User ID" id="user"/>
+        </div>
+        <div class="form-group">
+        <label>Password</label>
+            <input type="password" class="form-control" placeholder="password" id="password" />
+        </div>
+            <div class="form-group">
+           <input type="submit" value="Login">
+           <a href="Registration Form.html" >back</a>
+          </div>
+           
+      </form>
+      <span id="message" class="s"></span>
+     </div>
+   </div>
+ </div>
+ 
+</body>
+</html>
